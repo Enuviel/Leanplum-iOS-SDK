@@ -1964,7 +1964,7 @@ andParameters:(NSDictionary *)params
     // TODO(aleksandar): Allow this to be called before start, which will
     // modify the arguments to start rather than issuing a separate API call.
     if (![LPInternalState sharedState].calledStart) {
-        [self throwError:@"You cannot call setUserId before calling start"];
+        [self throwError:@"You cannot call setUserId or setUserAttributes before calling start"];
         return;
     }
     LP_TRY
